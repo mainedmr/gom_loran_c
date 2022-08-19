@@ -19,3 +19,12 @@ This process may be updated at a future date to utilize other Loran converters.
 - [loran_lines.html](loran_lines.html): Leaflet map displaying the output layer.
 - [ne_coast.Rda](ne_coast.Rda): R Data file containing high resolution SF polygon representation of the US/Canadian coast from NY to Newfoundland.
 - All the CSVs: Outputs of the various chunks of the conversion process. Most notably, [wx_grid_points.csv](wx_grid_points.csv) and [wy_grid_points.csv](wy_grid_points.csv) contain the coordinates in lat/lon and TDs for all of the line intersections.
+
+
+## Layer Attribute Fields
+
+All lines are based on the 9960 chain.
+
+- `td`: TD of the line as integer.
+- `station`: Hyphen delimited string representing the stations from which the TD was calculated, where the first character represents the station of the TD, and the second character represents the secondary station used to generate the intersections to form the hyperbole representing the TD.
+- `interval`: Largest interval the TD is evenly divisible by; intended use is to draw layer with scale dependency. Interval will be one of 5, 10, 25, 50, or 100.
